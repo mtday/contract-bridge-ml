@@ -1,4 +1,9 @@
+
 import re
+
+"""
+Supports parsing and representing the final contract played for a board.
+"""
 
 
 class Contract(object):

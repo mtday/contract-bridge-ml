@@ -1,6 +1,10 @@
 
 import re
 
+"""
+Supports parsing and representing a single card.
+"""
+
 
 class Card(object):
     SUITS = {'c': 0, 'd': 1, 'h': 2, 's': 3}

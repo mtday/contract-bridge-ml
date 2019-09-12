@@ -1,5 +1,7 @@
 
 """
+No idea what this is. Have seen a few different values. Calling it "board_type" for now.
+
 o
 n
 """

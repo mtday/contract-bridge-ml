@@ -1,5 +1,7 @@
 
 """
+Provides a comma-delimited list of player names. For example:
+
 David Souk,Julien Ber,Hakan Berk,Thibault V,Baptiste C,Cyrus Hett,Luc Bellic,Daniel Son
 """
 

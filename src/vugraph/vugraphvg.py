@@ -1,5 +1,7 @@
 
 """
+Provides a description of what the Vugraph contains. For example:
+
 WBF Youth World Online Team Championships,Final 4/4,I,1,14,USA,0,France,0
 """
 
@@ -36,7 +38,7 @@ class VugraphVG(object):
         start_deal = int(parts[3])
         end_deal = int(parts[4])
         team1 = parts[5]
-        team1_points = int(parts[6])  # TODO: are these points
+        team1_points = int(parts[6])  # TODO: are these points?
         team2 = parts[7]
         team2_points = int(parts[8])
         return VugraphVG(description, note, round_type, start_deal, end_deal, team1, team1_points, team2, team2_points)

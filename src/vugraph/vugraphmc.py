@@ -1,5 +1,7 @@
 
 """
+Provides the total number of tricks taken by declarer in a hand. For example:
+
 10
 """
 

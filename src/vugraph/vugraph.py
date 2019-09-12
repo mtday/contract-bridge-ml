@@ -1,4 +1,8 @@
 
+"""
+Provides the ability to parse the contents of a Vugraph `lin` file.
+"""
+
 from .vugraphah import VugraphAH
 from .vugraphan import VugraphAN
 from .vugraphmb import VugraphMB

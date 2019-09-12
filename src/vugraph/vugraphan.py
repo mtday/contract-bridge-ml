@@ -1,5 +1,7 @@
 
 """
+Provides an annotation on a bid. For example:
+
 +!d unbal
 """
 

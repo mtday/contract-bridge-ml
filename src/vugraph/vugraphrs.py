@@ -2,6 +2,8 @@
 from model import Result
 
 """
+Provides a comma-delimited list of the results of each board. For example:
+
 1nw+3,1nw+3,5de=,5dw+1,2ns=,3cs-1,4sw=,4sw=
 ,,,,1nw+3,1nw+3,5de=,5dw+1,2ns=,3cs-1,4sw=,4sw=
 """

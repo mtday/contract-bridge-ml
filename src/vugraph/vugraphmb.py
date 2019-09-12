@@ -2,6 +2,8 @@
 from model import Bid
 
 """
+Provides a bid that was made by a player. For example:
+
 p
 3c
 """

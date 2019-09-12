@@ -1,5 +1,7 @@
 
 """
+Provides a note that describes more information about what is happening. For example:
+
 vugraphe1: N asks EW's defence to 1NT
 """
 

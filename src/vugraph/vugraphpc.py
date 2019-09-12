@@ -2,6 +2,8 @@
 from model import Card
 
 """
+Represents a card being played. For example:
+
 c3
 """
 

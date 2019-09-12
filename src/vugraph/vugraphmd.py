@@ -3,6 +3,9 @@ from model import Deck
 from model import Hand
 
 """
+Defines the cards provided in each hand. May only specify 3 hands with the 4th being derived. The first digit
+is assumed to be the hand that is the dealer. For example:
+
 3SQH269D347QKC34QK,S68KAH37QD2JAC27A,S2357H8JAD568C69J,
 3SQJHQT9632D82CK98,S8743HK854DK76CQ2,SAT2HAJ7DAJ543CJ5,SK965HDQT9CAT7643
 """
@@ -15,7 +18,7 @@ class VugraphMD(object):
 
     @staticmethod
     def parse(md):
-        dealer = int(md[0:1])  # TODO: what is the prefixing number? Assuming it is the dealer
+        dealer = int(md[0:1])
         if dealer < 1 or dealer > 4:
             raise Exception('Unexpected dealer: ' + md)
         hands = []

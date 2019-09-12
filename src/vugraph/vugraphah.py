@@ -1,5 +1,7 @@
 
 """
+Provides a description of the board. For example:
+
 Board 1
 """
 

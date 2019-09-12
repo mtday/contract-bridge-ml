@@ -1,6 +1,10 @@
 
 from .card import Card
 
+"""
+Provides a complete deck of cards.
+"""
+
 
 class Deck(object):
     @staticmethod

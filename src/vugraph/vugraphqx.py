@@ -1,5 +1,7 @@
 
 """
+Provides a hand type (?) and the board number. For example:
+
 o1
 """
 

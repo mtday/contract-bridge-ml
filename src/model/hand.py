@@ -2,6 +2,10 @@
 from .card import Card
 import re
 
+"""
+Supports parsing and representing a single hand within a board.
+"""
+
 
 class Hand(object):
     def __init__(self, card_list):
@@ -26,6 +30,8 @@ class Hand(object):
                 suit = char
             elif suit is not None:
                 cards.append(Card(suit, char))
+            else:
+                raise Exception('Invalid card value {} without prior suit: {}'.format(char, value))
         if len(cards) != 13:
             raise Exception('Invalid hand has {} cards'.format(len(cards)))
         return Hand(cards)

@@ -1,6 +1,10 @@
 
 import re
 
+"""
+Supports parsing and representing a bid.
+"""
+
 
 class Bid(object):
     def __init__(self,
