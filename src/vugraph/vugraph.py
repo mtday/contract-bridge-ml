@@ -56,3 +56,15 @@ class Vugraph(object):
                     content.append(Vugraph.TYPES[key](value))
                 index = index + 2
         return Vugraph(content)
+
+    def __eq__(self, other):
+        return isinstance(other, Vugraph) and str(self) == str(other)
+
+    def __hash__(self):
+        return hash(str(self))
+
+    def __repr__(self):
+        s = ''
+        for item in self.content:
+            s += str(item) + '\n'
+        return s

@@ -11,6 +11,7 @@ Provides a comma-delimited list of the results of each board. For example:
 
 class VugraphRS(object):
     def __init__(self, results):
+        self.type = 'rs'
         self.results = results
 
     @staticmethod
@@ -28,4 +29,16 @@ class VugraphRS(object):
                 results[deal].append(result)
             index += 1
         return VugraphRS(results)
+
+    def __eq__(self, other):
+        return isinstance(other, VugraphRS) and str(self) == str(other)
+
+    def __hash__(self):
+        return hash(str(self))
+
+    def __repr__(self):
+        s = self.type
+        for result in self.results:
+            s += ':' + str(result)
+        return s
 

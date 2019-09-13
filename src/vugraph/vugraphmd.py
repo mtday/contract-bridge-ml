@@ -13,6 +13,7 @@ is assumed to be the hand that is the dealer. For example:
 
 class VugraphMD(object):
     def __init__(self, dealer, hands):
+        self.type = 'md'
         self.dealer = dealer
         self.hands = hands
 
@@ -34,3 +35,15 @@ class VugraphMD(object):
         if len(hands) != 4:
             raise Exception('Unexpected number of hands: ' + md)
         return VugraphMD(dealer, hands)
+
+    def __eq__(self, other):
+        return isinstance(other, VugraphMD) and str(self) == str(other)
+
+    def __hash__(self):
+        return hash(str(self))
+
+    def __repr__(self):
+        s = self.type + ':' + str(self.dealer)
+        for hand in self.hands:
+            s += ':' + str(hand)
+        return s
