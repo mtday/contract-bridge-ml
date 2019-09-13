@@ -35,19 +35,19 @@ class TestResult(unittest.TestCase):
         self.assertEqual(str(Result.parse('6CSXX=')), '6csxx=')
 
     def test_parse_invalid(self):
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(Exception):
             Result.parse('8cn=')  # 8 not a valid level
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(Exception):
             Result.parse('1xs=')  # x not a valid suit
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(Exception):
             Result.parse('1cx=')  # x not a valid declarer
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(Exception):
             Result.parse('1cn')  # missing score
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(Exception):
             Result.parse('1cn=0')  # unexpected trailing 0
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(Exception):
             Result.parse('1cn-8')  # -8 not valid result
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(Exception):
             Result.parse('1cn+8')  # +8 not valid result
 
     def test_repr(self):

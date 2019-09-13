@@ -5,16 +5,16 @@ import unittest
 
 class TestVugraphSV(unittest.TestCase):
     def test_init(self):
-        self.assertEqual(VugraphSV('b').board_type, 'b')
-        self.assertEqual(VugraphSV('e').board_type, 'e')
-        self.assertEqual(VugraphSV('n').board_type, 'n')
-        self.assertEqual(VugraphSV('o').board_type, 'o')
+        self.assertEqual(VugraphSV('b').vulnerability, 'b')
+        self.assertEqual(VugraphSV('e').vulnerability, 'e')
+        self.assertEqual(VugraphSV('n').vulnerability, 'n')
+        self.assertEqual(VugraphSV('o').vulnerability, 'o')
 
     def test_parse(self):
-        self.assertEqual(VugraphSV.parse('b').board_type, 'b')
-        self.assertEqual(VugraphSV.parse('e').board_type, 'e')
-        self.assertEqual(VugraphSV.parse('n').board_type, 'n')
-        self.assertEqual(VugraphSV.parse('o').board_type, 'o')
+        self.assertEqual(VugraphSV.parse('b').vulnerability, 'b')
+        self.assertEqual(VugraphSV.parse('e').vulnerability, 'e')
+        self.assertEqual(VugraphSV.parse('n').vulnerability, 'n')
+        self.assertEqual(VugraphSV.parse('o').vulnerability, 'o')
 
 
 if __name__ == '__main__':

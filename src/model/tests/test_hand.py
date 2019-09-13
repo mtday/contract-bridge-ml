@@ -54,11 +54,11 @@ class TestHand(unittest.TestCase):
         self.assertEqual(str(Hand.parse('saskhqhjdtd9d8c7c6c5s4s3h2')), 'c567d89th2jqs34ka')
 
     def test_init_invalid(self):
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(Exception):
             Hand('akqjt98765432')  # missing suit
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(Exception):
             Hand('sakqjt98765432a')  # too many cards
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(Exception):
             Hand('sakqjt987d765432')  # too many cards
 
 

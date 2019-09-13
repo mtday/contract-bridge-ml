@@ -63,11 +63,11 @@ class TestContract(unittest.TestCase):
         self.assertEqual(str(Contract.parse('6CSXX')), '6csxx')
 
     def test_parse_invalid(self):
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(Exception):
             Contract.parse('8cn')  # 8 not a valid level
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(Exception):
             Contract.parse('1xs')  # x not a valid suit
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(Exception):
             Contract.parse('1cx')  # x not a valid declarer
 
     def test_repr(self):

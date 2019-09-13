@@ -18,7 +18,7 @@ class TestVugraphPN(unittest.TestCase):
         self.assertEqual(pn.names[3], 'Name4')
 
     def test_parse_invalid(self):
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(Exception):
             VugraphPN.parse('Name1,Name2')  # number of names needs to be a multiple of 4
 
 

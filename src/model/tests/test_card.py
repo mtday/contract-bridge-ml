@@ -15,9 +15,9 @@ class TestCard(unittest.TestCase):
         self.assertEqual(Card.parse('C2').level, '2')
 
     def test_parse_invalid(self):
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(Exception):
             Card.parse('x2')  # x not a valid suit
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(Exception):
             Card.parse('c1')  # 1 not a valid level
 
     def test_order(self):

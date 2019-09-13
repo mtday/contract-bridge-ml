@@ -119,9 +119,9 @@ class TestBid(unittest.TestCase):
         self.assertEqual(str(Bid.parse('XX')), 'xx')
 
     def test_parse_invalid(self):
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(Exception):
             Bid.parse('8c')  # 8 not a valid level
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(Exception):
             Bid.parse('1x')  # x not a valid suit
 
     def test_repr(self):
