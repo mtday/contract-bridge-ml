@@ -1,6 +1,7 @@
 
 """
-No idea what this is. Have seen a few different values. Calling it "board_type" for now.
+Defines vulnerability on a board with 'o' meaning nobody vulnerable, 'n' meaning the North/South team is vulnerable,
+'e' meaning the East/West team is vulnerable, and 'b' meaning both teams are vulnerable. For example:
 
 o
 n
@@ -8,13 +9,13 @@ n
 
 
 class VugraphSV(object):
-    def __init__(self, board_type):
+    def __init__(self, vulnerability):
         self.type = 'sv'
-        self.board_type = board_type
+        self.vulnerability = vulnerability
 
     @staticmethod
     def parse(sv):
-        if sv != 'b' and sv != 'e' and sv != 'n' and sv != 'o':  # TODO: what is this?
+        if sv != 'b' and sv != 'e' and sv != 'n' and sv != 'o':
             raise Exception('Unsupported board type: ' + sv)
         return VugraphSV(sv)
 
@@ -25,4 +26,4 @@ class VugraphSV(object):
         return hash(str(self))
 
     def __repr__(self):
-        return self.type + ':' + self.board_type
+        return self.type + ':' + self.vulnerability
